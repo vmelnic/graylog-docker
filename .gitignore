@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+.idea
+.env
+docker/graylog/storage/graylog/data/**
+!docker/graylog/storage/graylog/data/.gitkeep
+docker/graylog/storage/elasticsearch/data/**
+!docker/graylog/storage/elasticsearch/data/.gitkeep
+docker/graylog/storage/mongo/data/**
+!docker/graylog/storage/mongo/data/.gitkeep
+docker/graylog/storage/graylog/config/**
+!docker/graylog/storage/graylog/config/graylog.conf
+!docker/graylog/storage/graylog/config/log4j2.xml

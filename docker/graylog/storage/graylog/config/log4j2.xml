@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="org.graylog2.log4j" shutdownHook="disable">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p: %c - %m%n"/>
+        </Console>
+        <Memory name="graylog-internal-logs" bufferSize="500"/>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.graylog2" level="info"/>
+        <Logger name="com.github.joschi.jadconfig" level="warn"/>
+        <Logger name="org.elasticsearch.script" level="warn"/>
+        <Logger name="org.graylog2.periodical.VersionCheckThread" level="off"/>
+        <Logger name="com.joestelmach.natty.Parser" level="warn"/>
+        <Logger name="org.graylog.shaded.kafka09.log.Log" level="warn"/>
+        <Logger name="org.graylog.shaded.kafka09.log.OffsetIndex" level="warn"/>
+        <Logger name="org.apache.kafka.clients.consumer.ConsumerConfig" level="warn"/>
+        <Logger name="org.apache.shiro.session.mgt.AbstractValidatingSessionManager" level="warn"/>
+        <Root level="warn">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="graylog-internal-logs"/>
+        </Root>
+    </Loggers>
+</Configuration>
